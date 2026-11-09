@@ -44,9 +44,9 @@ sudo apt install \
   libdrm2:amd64=2.4.134-3 libdrm2:i386=2.4.134-3 \
   libdrm-amdgpu1:amd64=2.4.134-3 libdrm-amdgpu1:i386=2.4.134-3 \
   libdrm-common=2.4.134-3 \
-  libdrm-dev:amd64=2.4.134-3 libdrm-dev:i386=2.4.134-3 \
+  libdrm-dev:amd64=2.4.134-3 \
   libdrm-radeon1:amd64=2.4.134-3 libdrm-radeon1:i386=2.4.134-3 \
-  libdrm-tests:amd64=2.4.134-3 libdrm-tests:i386=2.4.134-3 \
+  libdrm-tests:amd64=2.4.134-3 \
   libegl-mesa0:amd64=26.0.8-1 libegl-mesa0:i386=26.0.8-1 \
   libgbm1:amd64=26.0.8-1 libgbm1:i386=26.0.8-1 \
   libgbm-dev:amd64=26.0.8-1 libgbm-dev:i386=26.0.8-1 \
