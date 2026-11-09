@@ -69,9 +69,9 @@ sudo apt-mark hold \
   libdrm2 libdrm2:i386 \
   libdrm-amdgpu1 libdrm-amdgpu1:i386 \
   libdrm-common \
-  libdrm-dev libdrm-dev:i386 \
+  libdrm-dev \
   libdrm-radeon1 libdrm-radeon1:i386 \
-  libdrm-tests libdrm-tests:i386 \
+  libdrm-tests \
   libegl-mesa0 libegl-mesa0:i386 \
   libgbm1 libgbm1:i386 \
   libgbm-dev libgbm-dev:i386 \
