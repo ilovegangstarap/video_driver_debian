@@ -61,7 +61,7 @@ sudo apt install \
   mesa-vulkan-drivers:amd64=26.0.8-1 mesa-vulkan-drivers:i386=26.0.8-1
 ```
 
-### 7. Lock Driver Versions (Highly Recommended)
+### 7. Lock Driver Versions (NOT OPTIONAL)
 Because these packages share package names with upstream system mirrors, a standard `sudo apt upgrade` could overwrite them. Lock these packages at their current versions to prevent accidental regression or system library mismatch:
 
 ```bash
