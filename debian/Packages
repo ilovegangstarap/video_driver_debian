@@ -6,20 +6,81 @@ Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Installed-Size: 78
 Depends: libc6 (>= 2.38), libdrm2 (>= 2.4.108)
 Filename: ./libdrm-amdgpu1_2.4.134-3_i386.deb
-Size: 22628
-MD5sum: 733970382728d48235bf0a9524c71131
-SHA1: 42698b5ddbdcdb915111f0fc16ae1246e913efdf
-SHA256: 4853ae20f2043f3c2c8fa659faea1bcdf4f33768ad91c673dfa1e6ee3658db50
+Size: 22616
+MD5sum: 124f8d416b3a79776841eb62d6737061
+SHA1: 47176cf3da0c00877084b82af4e1e83c7d8a3a26
+SHA256: a71bb4bdc006331b0fdf2a32c046706a500e66ff00ca0632ed2c615c5d82f4eb
 Section: libs
 Priority: optional
 Multi-Arch: same
-Homepage: https://gitlab.freedesktop.org/mesa/libdrm/
+Homepage: https://freedesktop.org
 Description: Userspace interface to amdgpu-specific kernel DRM services -- runtime
  This library implements the userspace interface to the kernel DRM
  services.  DRM stands for "Direct Rendering Manager", which is the
  kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
  The DRI is currently used on Linux to provide hardware-accelerated
  OpenGL drivers.
+
+Package: libdrm-amdgpu1
+Source: libdrm
+Version: 2.4.134-3
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 79
+Depends: libc6 (>= 2.38), libdrm2 (>= 2.4.108)
+Filename: ./libdrm-amdgpu1_2.4.134-3_amd64.deb
+Size: 21396
+MD5sum: e1ffd00b8e12048deac28597f9adc92f
+SHA1: 2cce392972a2ceb50cd3d4263512a930cd7d86af
+SHA256: 2aa304a3f76faa3e20a30ae49ca8ebe7099a263d540a12262ca5bdd4c7c772d5
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://freedesktop.org
+Description: Userspace interface to amdgpu-specific kernel DRM services -- runtime
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+
+Package: libdrm-amdgpu1-dbgsym
+Source: libdrm
+Version: 2.4.134-3
+Auto-Built-Package: debug-symbols
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 21
+Depends: libdrm-amdgpu1 (= 2.4.134-3)
+Filename: ./libdrm-amdgpu1-dbgsym_2.4.134-3_i386.deb
+Size: 4480
+MD5sum: 11fa7fae73b80835cf01c318a7e6eab4
+SHA1: bd3e13da55a7126554c87d7c9abc4efe6eb375f4
+SHA256: 8a80df2255c19212d5fcb50fac496cda11e9be8f101a932e05db97ebdc0dafaf
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libdrm-amdgpu1
+Build-Ids: 14c8be2cd7231c83b2dbfdc151abd502440a1b84
+
+Package: libdrm-amdgpu1-dbgsym
+Source: libdrm
+Version: 2.4.134-3
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 26
+Depends: libdrm-amdgpu1 (= 2.4.134-3)
+Filename: ./libdrm-amdgpu1-dbgsym_2.4.134-3_amd64.deb
+Size: 4432
+MD5sum: 3a1e2caea72b3101ffba978b6641826e
+SHA1: 12d5d7f9e7fffb17dfd496dbfaa28651e7a1dbd5
+SHA256: 771f68af431f9946c9a70f5d61d8d08746c16b61fb33c390b2578a5c8b4c3e34
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libdrm-amdgpu1
+Build-Ids: 524db199959154c18724b7eceb5c4b25f95c16fa
 
 Package: libdrm-common
 Source: libdrm
@@ -28,14 +89,14 @@ Architecture: all
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Installed-Size: 41
 Filename: ./libdrm-common_2.4.134-3_all.deb
-Size: 7892
-MD5sum: 6f50ccbfa2702e44ac2a953ecf538cd3
-SHA1: b6624cd1a3b67199ff43935f702b7221de285297
-SHA256: 7be284789b181ed4193f40359e6f828cdb65583daa0d372a4f81e44c413aed74
+Size: 7848
+MD5sum: efaf0f92eb45428c8dc2084003e2d0a6
+SHA1: 5abcef3eea3671365d95b57bc87851e6880f4481
+SHA256: 072c2d0ebb62d750ac6dd51ab6785b024c7e4aae3ef38e7314bcfaf7f50af539
 Section: libs
 Priority: optional
 Multi-Arch: foreign
-Homepage: https://gitlab.freedesktop.org/mesa/libdrm/
+Homepage: https://freedesktop.org
 Description: Userspace interface to kernel DRM services -- common files
  This library implements the userspace interface to the kernel DRM
  services.  DRM stands for "Direct Rendering Manager", which is the
@@ -53,14 +114,39 @@ Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Installed-Size: 980
 Depends: libdrm2 (= 2.4.134-3), libdrm-radeon1 (= 2.4.134-3), libdrm-amdgpu1 (= 2.4.134-3), libpciaccess-dev
 Filename: ./libdrm-dev_2.4.134-3_amd64.deb
-Size: 204072
-MD5sum: 1a7ff854a35862ea891ec7c60417baae
-SHA1: 0cee3bface5b90339a7f8c079dde890fe3f73a52
-SHA256: 45547e4d14afa0fb3a75581ab58741f1a9dc3e6fae544304f04140c017635f55
+Size: 204064
+MD5sum: 112b2f15cb2adcebb7cc64edf5b29c5c
+SHA1: 0c7afc4de16e1bccce1eb89941febb9520e94e9a
+SHA256: c874200d367b60de8bc2f9297475c11a7180bd50a5b042cdbd14f345b51dff72
 Section: libdevel
 Priority: optional
 Multi-Arch: same
-Homepage: https://gitlab.freedesktop.org/mesa/libdrm/
+Homepage: https://freedesktop.org
+Description: Userspace interface to kernel DRM services -- development files
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+ .
+ This package provides the development environment for libdrm.
+
+Package: libdrm-dev
+Source: libdrm
+Version: 2.4.134-3
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 945
+Depends: libdrm2 (= 2.4.134-3), libdrm-radeon1 (= 2.4.134-3), libdrm-amdgpu1 (= 2.4.134-3), libpciaccess-dev
+Filename: ./libdrm-dev_2.4.134-3_i386.deb
+Size: 206596
+MD5sum: c6ca18b4b7e664d04a1b5db9fdfaf943
+SHA1: cee19d139bf2755e913356b2979b81c84a5e091b
+SHA256: 06812b40831825077ce79ab6546fcf059ab4109e06db3ff8ec38cec391dddfc5
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Homepage: https://freedesktop.org
 Description: Userspace interface to kernel DRM services -- development files
  This library implements the userspace interface to the kernel DRM
  services.  DRM stands for "Direct Rendering Manager", which is the
@@ -78,20 +164,81 @@ Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Installed-Size: 89
 Depends: libc6 (>= 2.2.5), libdrm2 (>= 2.4.108)
 Filename: ./libdrm-radeon1_2.4.134-3_amd64.deb
-Size: 20600
-MD5sum: 8a314210c13b9c1d422368f2901faf60
-SHA1: edb48e4e522ea965935d8fac68685b0c13b34789
-SHA256: f2f111876098416f00f5673ff58ffb1acaf343d7857c891790c64033d04df6ed
+Size: 20604
+MD5sum: 3150061d1a5d93d3e9f23895e1b8363d
+SHA1: 448120d49d1f1e732bc144030f858be1bee564b7
+SHA256: 19b3e7baef935afc9d1bf65be332a19d2a610d364825d75863ef995815f306e1
 Section: libs
 Priority: optional
 Multi-Arch: same
-Homepage: https://gitlab.freedesktop.org/mesa/libdrm/
+Homepage: https://freedesktop.org
 Description: Userspace interface to radeon-specific kernel DRM services -- runtime
  This library implements the userspace interface to the kernel DRM
  services.  DRM stands for "Direct Rendering Manager", which is the
  kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
  The DRI is currently used on Linux to provide hardware-accelerated
  OpenGL drivers.
+
+Package: libdrm-radeon1
+Source: libdrm
+Version: 2.4.134-3
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 84
+Depends: libc6 (>= 2.1.3), libdrm2 (>= 2.4.108)
+Filename: ./libdrm-radeon1_2.4.134-3_i386.deb
+Size: 20696
+MD5sum: d9e2d838060b5bdb32e5c0b462b85365
+SHA1: 48197bab62026342bdcd385e8174dc9fed0a145e
+SHA256: 23ddaa47cf858ba1318a77cebfcc090109b65c4f8cebfee9681a766349028198
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://freedesktop.org
+Description: Userspace interface to radeon-specific kernel DRM services -- runtime
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+
+Package: libdrm-radeon1-dbgsym
+Source: libdrm
+Version: 2.4.134-3
+Auto-Built-Package: debug-symbols
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 18
+Depends: libdrm-radeon1 (= 2.4.134-3)
+Filename: ./libdrm-radeon1-dbgsym_2.4.134-3_i386.deb
+Size: 3648
+MD5sum: afb17b5e6f6da62b5770d47d8b54fd30
+SHA1: 1cd5a55a0dff01e7eb480204f4aa3c78d59290f0
+SHA256: 82de0c17a841867b7610fc05bb93db78747034e74b7c08d2eb4fe73e8b3df3d1
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libdrm-radeon1
+Build-Ids: a3bd1c6491be3feb4e38616bbbe6ef9a4e2c0a3b
+
+Package: libdrm-radeon1-dbgsym
+Source: libdrm
+Version: 2.4.134-3
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 22
+Depends: libdrm-radeon1 (= 2.4.134-3)
+Filename: ./libdrm-radeon1-dbgsym_2.4.134-3_amd64.deb
+Size: 3576
+MD5sum: 99f9f784083c289afec54fa60c83957b
+SHA1: b651407995c0353995117b2e8eaf6179b7c89b4a
+SHA256: e87f2f46ae9792c5e84a26f93b0babd718bd527655194051b070f7b6c1fc30b9
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libdrm-radeon1
+Build-Ids: 318205bf77cfb77c00fd87418485b46488c8e2c1
 
 Package: libdrm-tests
 Source: libdrm
@@ -101,13 +248,13 @@ Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Installed-Size: 223
 Depends: libdrm2 (= 2.4.134-3), libc6 (>= 2.38), libdrm-amdgpu1 (>= 2.4.77)
 Filename: ./libdrm-tests_2.4.134-3_amd64.deb
-Size: 47164
-MD5sum: b455aca55d77bbd51e3b0af4043ce2c5
-SHA1: 2a4b2f7f56ac9a2c2d260cf30e96cedb4620096e
-SHA256: 5d13b62c2c69dae7b22a39cd10697c0fd21f535b45095569a3259dfa33298222
+Size: 47256
+MD5sum: 2eae2e35411964c6ca41c53b9f35a716
+SHA1: e13982dbccf0a26943d419d0636f8a25a00c6d1c
+SHA256: 4e07efb82bed78470cd968cf00f1ab6ddaef9a5f8b4d6b8a4a04d035342f8980
 Section: libs
 Priority: optional
-Homepage: https://gitlab.freedesktop.org/mesa/libdrm/
+Homepage: https://freedesktop.org
 Description: Testing tools from the libdrm project
  This library implements the userspace interface to the kernel DRM
  services.  DRM stands for "Direct Rendering Manager", which is the
@@ -117,6 +264,66 @@ Description: Testing tools from the libdrm project
  .
  This package contains a variety of tools for testing from the libdrm project.
 
+Package: libdrm-tests
+Source: libdrm
+Version: 2.4.134-3
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 205
+Depends: libdrm2 (= 2.4.134-3), libc6 (>= 2.38), libdrm-amdgpu1 (>= 2.4.77)
+Filename: ./libdrm-tests_2.4.134-3_i386.deb
+Size: 46520
+MD5sum: 08d8119a6ce56264923ba869f56ff6e8
+SHA1: eafa00bc5f53ea79f6fcd8822a80852f98ac7422
+SHA256: 099f11d64d45242f12055590f6517c591581bb09c6a5d820f7930e8fe3d24b0f
+Section: libs
+Priority: optional
+Homepage: https://freedesktop.org
+Description: Testing tools from the libdrm project
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+ .
+ This package contains a variety of tools for testing from the libdrm project.
+
+Package: libdrm-tests-dbgsym
+Source: libdrm
+Version: 2.4.134-3
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 106
+Depends: libdrm-tests (= 2.4.134-3)
+Filename: ./libdrm-tests-dbgsym_2.4.134-3_amd64.deb
+Size: 9004
+MD5sum: 8f6f8bb1af04c22d7e98387b3438b475
+SHA1: e4e0b917b85c387e90013379fa84caf6f850590b
+SHA256: 32cb7de9b0b79dc30130436bc9376f9a5aafad18e30600d56892223e07e7cac8
+Section: debug
+Priority: optional
+Description: debug symbols for libdrm-tests
+Build-Ids: 47f992764579fae4bc990d41ed1aef299f72329c 51ec1fd070ee2510aa591bb9a590c9b70ba3cde8 9811c78a54f0041bfc8334ebddbb5f30f06f929f c7c93228d706860612ac15ce944c90b8de57e124 e7b62f4737946db4940620233568a86e79e8958b f911414f72119c6dced04fbd976241be0a5bb67c
+
+Package: libdrm-tests-dbgsym
+Source: libdrm
+Version: 2.4.134-3
+Auto-Built-Package: debug-symbols
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 96
+Depends: libdrm-tests (= 2.4.134-3)
+Filename: ./libdrm-tests-dbgsym_2.4.134-3_i386.deb
+Size: 8988
+MD5sum: 5db49e72e2e265886c3d935d662b0067
+SHA1: b8606013229cce9fb8016e16032d50b09dde9442
+SHA256: c81fd7010ab7f8299b5d29d617707c304a44167ff51a53a063d19cb944305f29
+Section: debug
+Priority: optional
+Description: debug symbols for libdrm-tests
+Build-Ids: 1153319bec475dd23d9e90feccc357b4a843b05a 1f2621929cfae542efbb6880efccce48e3d0fbcd 4cd857af68710b1824dcc9333092f70c98789a52 8eb79a49f28d016e63812222f8854c7ba612c6df c883e7ce99ff2e51e69a20a7eea2d0afb436210c e1f0b211059df027eb0999ed5a734e5f4b9e436a
+
 Package: libdrm2
 Source: libdrm
 Version: 2.4.134-3
@@ -125,14 +332,14 @@ Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Installed-Size: 118
 Depends: libdrm-common (>= 2.4.134-3), libc6 (>= 2.38)
 Filename: ./libdrm2_2.4.134-3_i386.deb
-Size: 34632
-MD5sum: 8f8dca88923578285e24f5a8fb656dab
-SHA1: 5976abc58f1b024f41700fa05c27297f8d9a5914
-SHA256: 2a6a6439dc53f35238d9ef726f2b9ca3773ac077c87baf36bc68d765f03913c6
+Size: 34624
+MD5sum: 31a7552524f929205e8e0fe586896001
+SHA1: 3758bbed86d601f5934bfd9b87b830e8bb47fc0a
+SHA256: 363534e4172beaaa8c62018c7847b0ae620615c557b442423043680bd6ba0798
 Section: libs
 Priority: optional
 Multi-Arch: same
-Homepage: https://gitlab.freedesktop.org/mesa/libdrm/
+Homepage: https://freedesktop.org
 Description: Userspace interface to kernel DRM services -- runtime
  This library implements the userspace interface to the kernel DRM
  services.  DRM stands for "Direct Rendering Manager", which is the
@@ -141,6 +348,69 @@ Description: Userspace interface to kernel DRM services -- runtime
  OpenGL drivers.
  .
  This package provides the runtime environment for libdrm.
+
+Package: libdrm2
+Source: libdrm
+Version: 2.4.134-3
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 127
+Depends: libdrm-common (>= 2.4.134-3), libc6 (>= 2.38)
+Filename: ./libdrm2_2.4.134-3_amd64.deb
+Size: 34304
+MD5sum: 1dcc110ca752a9f701068a4b6cf3de00
+SHA1: 9417bfba9b306dccad29479eb3672d078982337e
+SHA256: afd5fce07418e536574ae8e6e3bb6050e4daf4c86df33b4b0fee6f3701f91466
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://freedesktop.org
+Description: Userspace interface to kernel DRM services -- runtime
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+ .
+ This package provides the runtime environment for libdrm.
+
+Package: libdrm2-dbgsym
+Source: libdrm
+Version: 2.4.134-3
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 31
+Depends: libdrm2 (= 2.4.134-3)
+Filename: ./libdrm2-dbgsym_2.4.134-3_amd64.deb
+Size: 6052
+MD5sum: 445d2beedbab741723a15f5f2e0ff665
+SHA1: 623bfb59acd6b6a6fe2d8d3560b3e55e99c4d626
+SHA256: bc82dfec8920ed554682f087f13584585b00c7603e2f7500e7eb26b43b4bac6f
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libdrm2
+Build-Ids: 1881a879534a4969b75b2cb8e055370fb75c48a0
+
+Package: libdrm2-dbgsym
+Source: libdrm
+Version: 2.4.134-3
+Auto-Built-Package: debug-symbols
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 25
+Depends: libdrm2 (= 2.4.134-3)
+Filename: ./libdrm2-dbgsym_2.4.134-3_i386.deb
+Size: 6064
+MD5sum: ecf448d1dc5c4df407eb37d8867fc1cd
+SHA1: 670c3b681f8358125dd498d640775968f5a0d2a6
+SHA256: 1a7b00c37650e61af9ef5da58ae39c6b9195623f18d49ebd65de093f8e394fea
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libdrm2
+Build-Ids: d5879dbe4367845bc0af2d6e6888edefd24f65fe
 
 Package: libegl-mesa0
 Source: mesa
@@ -151,10 +421,10 @@ Installed-Size: 634
 Depends: libgbm1 (= 26.0.8-1), mesa-libgallium (= 26.0.8-1), libc6 (>= 2.38), libdrm2 (>= 2.4.125-1), libexpat1 (>= 2.0.1), libwayland-client0 (>= 1.24.0), libx11-6, libx11-xcb1, libxcb-dri3-0 (>= 1.13), libxcb-present0, libxcb-randr0 (>= 1.3), libxcb-shm0, libxcb-xfixes0, libxcb1 (>= 1.6)
 Provides: libegl-vendor
 Filename: ./libegl-mesa0_26.0.8-1_amd64.deb
-Size: 129720
-MD5sum: 7e9dd1db248fd921303c3943e5f10567
-SHA1: 5728381434c8cf55d92fd7f2fda3d6b2cef59273
-SHA256: 412b104c23671b4bf67e508c22ce1e2296cef933f3500dfdb4a9e2d2a57befb8
+Size: 129444
+MD5sum: 70eb87e96924245318c07f1638af8c61
+SHA1: b6259c582a87a2126d8c28ccb3f98190aaedaf79
+SHA256: 40f46655d5dedcdcd1298ddf8a49915af214984607f6bf30a16e8b3ea59091f4
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -165,6 +435,68 @@ Description: free implementation of the EGL API -- Mesa vendor library
  for use with other graphics libraries, such as OpenGL|ES.
  .
  This package contains the Mesa vendor library for EGL.
+
+Package: libegl-mesa0
+Source: mesa
+Version: 26.0.8-1
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 496
+Depends: libgbm1 (= 26.0.8-1), mesa-libgallium (= 26.0.8-1), libc6 (>= 2.38), libdrm2 (>= 2.4.125-1), libexpat1 (>= 2.0.1), libgcc-s1 (>= 4.2), libwayland-client0 (>= 1.24.0), libx11-6, libx11-xcb1, libxcb-dri3-0 (>= 1.13), libxcb-present0, libxcb-randr0 (>= 1.3), libxcb-shm0, libxcb-xfixes0, libxcb1 (>= 1.6)
+Provides: libegl-vendor
+Filename: ./libegl-mesa0_26.0.8-1_i386.deb
+Size: 120372
+MD5sum: 9ec6ab5a9166037468dd2a2341863e2d
+SHA1: 07bb380a717fd273544708dcadb906a17e9e9d08
+SHA256: 896c945656befcf55f90081f2aee27b1d2e710c93b770239b2ddf4ac52f1b111
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: free implementation of the EGL API -- Mesa vendor library
+ This package contains the EGL native platform graphics interface library.
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES.
+ .
+ This package contains the Mesa vendor library for EGL.
+
+Package: libegl-mesa0-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 81
+Depends: libegl-mesa0 (= 26.0.8-1)
+Filename: ./libegl-mesa0-dbgsym_26.0.8-1_amd64.deb
+Size: 16928
+MD5sum: 3f82ab29c47945f73e0a91ac94a477fc
+SHA1: 3daeee63da43dcc4a179abf9894e2b24470c548f
+SHA256: f1f8154e9dbc14a876b9517ebc98ba13ae76fea7a8adbaaef09d416ab3c0c454
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libegl-mesa0
+Build-Ids: 1fc6d5ca5ff71b04e1d756f0d8852856d90f3395
+
+Package: libegl-mesa0-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 66
+Depends: libegl-mesa0 (= 26.0.8-1)
+Filename: ./libegl-mesa0-dbgsym_26.0.8-1_i386.deb
+Size: 16552
+MD5sum: b744c4894cc8a101a2b512aa8d2933d5
+SHA1: c6fd0a0cfdda20e3557d870cc658c17e2ff8c018
+SHA256: e62e3292bc43dc8afb796fa65d667432cfca284aa7e1c202b2b1a384e9887fa8
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libegl-mesa0
+Build-Ids: 98ee9dcefa8ddeafd0548f92c945069b08aeba1e
 
 Package: libegl1-mesa-dev
 Source: mesa
@@ -178,6 +510,31 @@ Size: 19308
 MD5sum: 5f0bf14c1a3d9bb552aab7947fe1040b
 SHA1: ac753b10ea80cd8d87e78eadb818f4c5dcd67d16
 SHA256: 78713861fd46df61544b12663725593f2364728d6b353e08e1d757fa37d8c65b
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: free implementation of the EGL API -- development files
+ This package contains the development environment required for compiling
+ programs against EGL native platform graphics interface library.
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES.
+ .
+ This package provides the development environment for compiling programs
+ against the EGL library.
+
+Package: libegl1-mesa-dev
+Source: mesa
+Version: 26.0.8-1
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 60
+Depends: libegl-dev, libglvnd-dev
+Filename: ./libegl1-mesa-dev_26.0.8-1_i386.deb
+Size: 19304
+MD5sum: 35f030d09395acccd3613c4af8567c4b
+SHA1: bf80b098e4dc22c5d45c84ae263054cf76f037c9
+SHA256: 4beafbebff0d72bcc37fef9480390b4fc7b3ea44a695682f8ab93b4da54ba1e8
 Section: libdevel
 Priority: optional
 Multi-Arch: same
@@ -216,6 +573,31 @@ Description: generic buffer management API -- development files
  This package provides the development environment for compiling programs
  against the GBM library.
 
+Package: libgbm-dev
+Source: mesa
+Version: 26.0.8-1
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 72
+Depends: libgbm1 (= 26.0.8-1)
+Filename: ./libgbm-dev_26.0.8-1_i386.deb
+Size: 21152
+MD5sum: 4f293741c1f78d98dccd5bd38e453777
+SHA1: 37fa9cc20a9018df8d1fbf749b90b523958de600
+SHA256: fa2aa954aa6196e32c8ea637606a43bec46402a9d0fed04d1143ceb2c536ad56
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: generic buffer management API -- development files
+ This package contains the GBM buffer management library.  It provides a
+ mechanism for allocating buffers for graphics rendering tied to Mesa.
+ .
+ GBM is intended to be used as a native platform for EGL on drm or openwfd.
+ .
+ This package provides the development environment for compiling programs
+ against the GBM library.
+
 Package: libgbm1
 Source: mesa
 Version: 26.0.8-1
@@ -224,10 +606,10 @@ Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Installed-Size: 337
 Depends: mesa-libgallium (= 26.0.8-1), libc6 (>= 2.38), libdrm2 (>= 2.4.125-1), libexpat1 (>= 2.0.1)
 Filename: ./libgbm1_26.0.8-1_amd64.deb
-Size: 60284
-MD5sum: c17bc92f7cdb58ffdf4f063ab131e979
-SHA1: 9781ef830997fdfc8bd630700640fa095448191b
-SHA256: becb02d6b1f339fc719173fa7da8773b76b5f99d4a185490b4f5381df3544f69
+Size: 60472
+MD5sum: 1bca36765ed2cdbd0fe0d1ba963ac97d
+SHA1: 1e1a038f8f4177a5bf5fedc51f4abd50b4d45b9f
+SHA256: 13f6310dea7cf313c159d2ff222d724d070abe35405f5dfca9b7fc3f3bb58901
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -237,6 +619,66 @@ Description: generic buffer management API -- runtime
  mechanism for allocating buffers for graphics rendering tied to Mesa.
  .
  GBM is intended to be used as a native platform for EGL on drm or openwfd.
+
+Package: libgbm1
+Source: mesa
+Version: 26.0.8-1
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 243
+Depends: mesa-libgallium (= 26.0.8-1), libc6 (>= 2.38), libdrm2 (>= 2.4.125-1), libexpat1 (>= 2.0.1)
+Filename: ./libgbm1_26.0.8-1_i386.deb
+Size: 52620
+MD5sum: 08386f6ea6e6ead40af56d7354f29c75
+SHA1: e196af7e9be3372c89c49b5ff7ddf88f32f9921b
+SHA256: 797fc0752c3be904679e6dc75d3ed2ba29cbe0753403ba83aca971f15dcfcfdf
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: generic buffer management API -- runtime
+ This package contains the GBM buffer management library.  It provides a
+ mechanism for allocating buffers for graphics rendering tied to Mesa.
+ .
+ GBM is intended to be used as a native platform for EGL on drm or openwfd.
+
+Package: libgbm1-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 36
+Depends: libgbm1 (= 26.0.8-1)
+Filename: ./libgbm1-dbgsym_26.0.8-1_amd64.deb
+Size: 6624
+MD5sum: fc0c2866e844f9eaca6707094f70fc30
+SHA1: 92f5915f4dc67a6042ed6282c6ab0936d9c67245
+SHA256: da542b53d286c230e81140a2c578aa89141d44eef4952efbf72a553a52fe1cf9
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libgbm1
+Build-Ids: 0b2c87c1460e3f9849c39459e7400f1ef9267004 bd1533e115755f6bb3043b21e96c21e9f8e0ed7b
+
+Package: libgbm1-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 29
+Depends: libgbm1 (= 26.0.8-1)
+Filename: ./libgbm1-dbgsym_26.0.8-1_i386.deb
+Size: 6112
+MD5sum: 736865bbc827785ca9cc102116c6587e
+SHA1: ed613932820fd09e3a8c111165ca5fcbc2dc7894
+SHA256: 50a62cfa8ba4f4a3fe25eb495316c926252e03306774d8445a549567585c6b8b
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libgbm1
+Build-Ids: bb438ce608c9145055d3f575632253666efa536c edda08c64cbc95b1994467e3505c9c2ddc09c91a
 
 Package: libgl1-mesa-dev
 Source: mesa
@@ -250,6 +692,25 @@ Size: 15144
 MD5sum: 2534f9e4faafadf5f47de007ca1bcf88
 SHA1: 9cda37998b659b1ca34c0dc66d0c61806d3f541c
 SHA256: 4d2750e0979217343fddf09e1dbb045061f2a11339cdb74bf692c198f1922097
+Section: oldlibs
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: transitional dummy package
+ This is a transitional dummy package, it can be safely removed.
+
+Package: libgl1-mesa-dev
+Source: mesa
+Version: 26.0.8-1
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 35
+Depends: libgl-dev, libglvnd-dev
+Filename: ./libgl1-mesa-dev_26.0.8-1_amd64.deb
+Size: 15144
+MD5sum: d9a478a185662b272c1c9c178e3bb371
+SHA1: 96e7eeeda4dd50c3ee8574a809dcf6163865f014
+SHA256: d67aa978da8258b7609153d16c09b9a16a1a43fdad8c8c83d5424406ecdbb368
 Section: oldlibs
 Priority: optional
 Multi-Arch: same
@@ -284,6 +745,71 @@ Description: free implementation of the OpenGL API -- DRI modules
  For a complete description of Mesa, please look at the
  libglx-mesa0 package.
 
+Package: libgl1-mesa-dri
+Source: mesa
+Version: 26.0.8-1
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 237
+Depends: libgbm1 (= 26.0.8-1), libvulkan1, libc6 (>= 2.34)
+Filename: ./libgl1-mesa-dri_26.0.8-1_amd64.deb
+Size: 42848
+MD5sum: 5d89651ed5ffb31188c908090f107e9f
+SHA1: 137db61e27a5fe77058ddd421fef291220fc8d4a
+SHA256: 93d589b2ca1f9e345bfb9d9faeff23bb231f7acd7d227fe4995b5343441eaac0
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: free implementation of the OpenGL API -- DRI modules
+ This version of Mesa provides GLX and DRI capabilities: it is capable of
+ both direct and indirect rendering.  For direct rendering, it can use DRI
+ modules from the libgl1-mesa-dri package to accelerate drawing.
+ .
+ This package does not include the OpenGL library itself, only the DRI
+ modules for accelerating direct rendering.
+ .
+ For a complete description of Mesa, please look at the
+ libglx-mesa0 package.
+
+Package: libgl1-mesa-dri-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 18
+Depends: libgl1-mesa-dri (= 26.0.8-1)
+Filename: ./libgl1-mesa-dri-dbgsym_26.0.8-1_i386.deb
+Size: 3252
+MD5sum: 2477371b55e44292807923c7e0c287cd
+SHA1: 9c3d5f2442487d0c3c8efcf78954df280fff20f1
+SHA256: 9b5e928b5ccd5f4c35a20cf9a6f298e30881c626a106aa24400aacba4bdb0ba0
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libgl1-mesa-dri
+Build-Ids: 3fa95d44b48a3700408cca1967efeed83fde02da
+
+Package: libgl1-mesa-dri-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 19
+Depends: libgl1-mesa-dri (= 26.0.8-1)
+Filename: ./libgl1-mesa-dri-dbgsym_26.0.8-1_amd64.deb
+Size: 3220
+MD5sum: c4624c35cb03bdf6e6f92ae7e4ecfa40
+SHA1: 4883e126ae80a78d2ecb180e127dbe4c11793577
+SHA256: f80a239268eb2df25f1af8426417da1568f86558c4d3599e5c6c05aeb889f90f
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libgl1-mesa-dri
+Build-Ids: 15852a662fafea6ab9f60909ebea703a1f693933
+
 Package: libgles2-mesa-dev
 Source: mesa
 Version: 26.0.8-1
@@ -296,6 +822,25 @@ Size: 15140
 MD5sum: 28ae6eaaeaf393aaa1d9643ff4424a3a
 SHA1: 8961f302356b438db23d8b5e77e8f4a24e021129
 SHA256: b436223a9da0fafdf73207a5b3a8fff0b2c82f3e6a3f7d174adb3d4ff13a92f4
+Section: oldlibs
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: transitional dummy package
+ This is a transitional dummy package, it can be safely removed.
+
+Package: libgles2-mesa-dev
+Source: mesa
+Version: 26.0.8-1
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 35
+Depends: libgles-dev, libglvnd-dev
+Filename: ./libgles2-mesa-dev_26.0.8-1_i386.deb
+Size: 15140
+MD5sum: c0332a2f8f2362d6c82dc4a305493b65
+SHA1: 27bb712ad7c607e3bfdaba3ddc9bf8b229c1ff08
+SHA256: 62cd2ea8299f39404925ab2357049366c7565832819337d685028db328c826f9
 Section: oldlibs
 Priority: optional
 Multi-Arch: same
@@ -336,6 +881,109 @@ Description: free implementation of the OpenGL API -- GLX vendor library
  This package does not include the modules themselves: these can be found
  in the libgl1-mesa-dri package.
 
+Package: libglx-mesa0
+Source: mesa
+Version: 26.0.8-1
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 607
+Depends: libgl1-mesa-dri, mesa-libgallium (= 26.0.8-1), libc6 (>= 2.38), libdrm2 (>= 2.4.125-1), libexpat1 (>= 2.0.1), libx11-6 (>= 2:1.4.99.1), libx11-xcb1, libxcb-dri3-0, libxcb-glx0 (>= 1.8), libxcb-present0, libxcb-shm0, libxcb-xfixes0, libxcb1, libxext6, libxxf86vm1 (>= 1:1.1.4)
+Breaks: glx-diversions (<< 0.8.4~), libopengl-perl (<< 0.6704+dfsg-2)
+Provides: libglx-vendor
+Filename: ./libglx-mesa0_26.0.8-1_amd64.deb
+Size: 118024
+MD5sum: 9b0d1b79b4b5d587c64f9508b4dba6d6
+SHA1: bf4c23a0e7bedfa561c3c723329b8ff0a992931d
+SHA256: 0244674537f403d01995b80f45ba72b2a5cad18746c8a011dec3b5455d554174
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: free implementation of the OpenGL API -- GLX vendor library
+ Mesa is a 3-D graphics library with an API which is very similar to
+ that of OpenGL.  To the extent that Mesa utilizes the OpenGL command
+ syntax or state machine, it is being used with authorization from
+ Silicon Graphics, Inc.  However, the authors make no claim that Mesa
+ is in any way a compatible replacement for OpenGL or associated with
+ Silicon Graphics, Inc.
+ .
+ This version of Mesa provides GLX and DRI capabilities: it is capable of
+ both direct and indirect rendering.  For direct rendering, it can use DRI
+ modules from the libgl1-mesa-dri package to accelerate drawing.
+ .
+ This package does not include the modules themselves: these can be found
+ in the libgl1-mesa-dri package.
+
+Package: libglx-mesa0-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 70
+Depends: libglx-mesa0 (= 26.0.8-1)
+Filename: ./libglx-mesa0-dbgsym_26.0.8-1_i386.deb
+Size: 17612
+MD5sum: 8c226f09fd99be927face99ec8816bbd
+SHA1: 73a1bcfa3667965e2775e235d8c4edff83f9ed0b
+SHA256: df10eff85270dd7eb8af60015c6cd5301e77556e93f5f508fe94aa12d1feb94f
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libglx-mesa0
+Build-Ids: 9196ea0c4e2a667d4ab5641f75c87e632b1374d7
+
+Package: libglx-mesa0-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 86
+Depends: libglx-mesa0 (= 26.0.8-1)
+Filename: ./libglx-mesa0-dbgsym_26.0.8-1_amd64.deb
+Size: 18284
+MD5sum: 71f27f1334c7123a92f0407c099b7f8d
+SHA1: 6a2e4f9bb532273d2dc44dd1fd0d11cb20ea7099
+SHA256: ad79f061147bb48b6b66a464fec2c4482bf11267bce56af48d9856048b187f5f
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libglx-mesa0
+Build-Ids: f1c83cd5e812708273ac47603d700766fe78223d
+
+Package: libllvmspirvlib-23-dev
+Version: 23.1.3+git20261126-1
+Architecture: amd64
+Maintainer: root@GROS-QLQC0RA9ET
+Installed-Size: 5304
+Depends: llvm-23-dev, spirv-headers, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libllvm23, libllvmspirvlib-23-dev, libstdc++6 (>= 11)
+Provides: libllvmspirvlib23, llvm-spirv-23
+Filename: ./libllvmspirvlib-23-dev_23.1.3+git20261126-1_amd64.deb
+Size: 942544
+MD5sum: a14169436511ddb8fefe09caae5ee657
+SHA1: e25981311d4e60832d49dc6584c28670b6b6216c
+SHA256: d58921959e7bf9341d23a1303ac4e9197e49e236b891b938066eee757633ecad
+Section: checkinstall
+Priority: extra
+Description: Package created with checkinstall 1.8.3
+
+Package: libllvmspirvlib-23-dev
+Version: 23.1.3+git20261126-1
+Architecture: i386
+Maintainer: root@GROS-QLQC0RA9ET
+Installed-Size: 5068
+Provides: libllvmspirvlib23
+Filename: ./libllvmspirvlib-23-dev_23.1.3+git20261126-1_i386.deb
+Size: 970252
+MD5sum: d09c03c55b6575b975cd09b980153e33
+SHA1: ec9034bb22b5733cdd7c0ef88dee97a2557ce3cc
+SHA256: 1a1a22b8a9be247d7690a4b28ab1eb740a440eeb72e9de31986344a1005545ea
+Section: checkinstall
+Priority: extra
+Multi-Arch: same
+Description: Package created with checkinstall 1.8.3
+
 Package: mesa-common-dev
 Source: mesa
 Version: 26.0.8-1
@@ -350,6 +998,29 @@ Size: 3369216
 MD5sum: e2d229aaa7c9ce652884e453414d057b
 SHA1: 4b982536c6e345ebd74ffda204f20dc4e033a74c
 SHA256: a49b99fd99d941578e45a1459589cb243418d481482a5f015e8e2faea6f55e18
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: Developer documentation for Mesa
+ This package includes the specifications for the Mesa-specific OpenGL
+ extensions, the complete set of release notes and the development header
+ files common to all Mesa packages.
+
+Package: mesa-common-dev
+Source: mesa
+Version: 26.0.8-1
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 3996
+Depends: libdrm-dev (>= 2.4.95), libgl-dev, libglx-dev, libx11-dev
+Breaks: libegl1-mesa-dev (<< 18.2.5-2)
+Replaces: libegl1-mesa-dev (<< 18.2.5-2)
+Filename: ./mesa-common-dev_26.0.8-1_amd64.deb
+Size: 3369252
+MD5sum: 9a481c4be67c07e3c705599c23f6eada
+SHA1: dfa14e22c3f127052c085ab7e0ff2aa30d1a09ac
+SHA256: be4f95024d67478270ddb71895c5e640a5dc61713e922dace6ac4b8d85114f4d
 Section: libdevel
 Priority: optional
 Multi-Arch: same
@@ -379,6 +1050,64 @@ Description: DRM shim libraries
  This package provides drm-shim libraries which can be used for testing DRM
  drivers when none exists on the host.
 
+Package: mesa-drm-shim
+Source: mesa
+Version: 26.0.8-1
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 464
+Depends: libc6 (>= 2.42)
+Filename: ./mesa-drm-shim_26.0.8-1_amd64.deb
+Size: 73832
+MD5sum: af2b0ce57b0349f1db85b6b00ee45349
+SHA1: 4903ae116ca66a2c96ed1a09c837c09f113313e6
+SHA256: baed237deec031b731eb6310c214b6dd2e7e27b069cece9b04e56210a5e9ed90
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: DRM shim libraries
+ This package provides drm-shim libraries which can be used for testing DRM
+ drivers when none exists on the host.
+
+Package: mesa-drm-shim-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 69
+Depends: mesa-drm-shim (= 26.0.8-1)
+Filename: ./mesa-drm-shim-dbgsym_26.0.8-1_i386.deb
+Size: 13728
+MD5sum: ffe8698ba16671dc08dd99bbdedff9b0
+SHA1: 86e9cc429798cbb11e1df38a3c723e1755d9c90f
+SHA256: 02012a4e21c058dcafd23b67d58f30392872a3a44152f9bd78fe484d9cf5fd29
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for mesa-drm-shim
+Build-Ids: 398aef42b81dd4639edb21c0014ffb89aa2dd19d a80a2d00e93f9f924f730afabe92f03e6a0fd782
+
+Package: mesa-drm-shim-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 89
+Depends: mesa-drm-shim (= 26.0.8-1)
+Filename: ./mesa-drm-shim-dbgsym_26.0.8-1_amd64.deb
+Size: 14200
+MD5sum: f0589052f6a4b468592877a3e1cb05d7
+SHA1: 5aa4157681643756092596909d44e852bad91bdb
+SHA256: 18cb4b0d0d17e4835eb4766ac32c3f38be428d36cca7585c42185b5d3f85dd65
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for mesa-drm-shim
+Build-Ids: 3a0ff3cecca8a4358f36752cb6ae2d776ec489d1 f2eddb71e0886567fa1e8465ec813a8a8602ab67
+
 Package: mesa-libgallium
 Source: mesa
 Version: 26.0.8-1
@@ -391,10 +1120,10 @@ Breaks: mesa-va-drivers (<< 25.2.8-3), mesa-vdpau-drivers (<< 25.2.8-3)
 Replaces: mesa-va-drivers (<< 25.2.8-3), mesa-vdpau-drivers (<< 25.2.8-3)
 Provides: libglapi-mesa, mesa-va-drivers, mesa-vdpau-drivers, va-driver
 Filename: ./mesa-libgallium_26.0.8-1_i386.deb
-Size: 4721244
-MD5sum: 04069d3d079139cdab4bdbba4fb63128
-SHA1: 0836f26ba3bdffc98c1763537237115fdf0f1e20
-SHA256: ae5739bc41c1c4c1765d7ad0cdada02eef92dcba3db022d1bc95d02f98c6069b
+Size: 4720248
+MD5sum: 853eaabc49a44e576219fd482a01713d
+SHA1: 51bfbbdb129c95bee92462d1a60a22398e87618b
+SHA256: f49fc92a38989d1a922a72b5c20a79f80a0dce84bd070969c003255cd35c2da3
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -404,19 +1133,82 @@ Description: shared infrastructure for Mesa drivers
  multiple Mesa drivers. This library is an implementation detail of Mesa
  and should not be used directly by user code.
 
+Package: mesa-libgallium
+Source: mesa
+Version: 26.0.8-1
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 33170
+Depends: libc6 (>= 2.43), libdrm-amdgpu1 (>= 2.4.125-1), libdrm2 (>= 2.4.125-1), libelf1t64 (>= 0.142), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libllvm23, libsensors5 (>= 1:3.5.0), libstdc++6 (>= 12), libx11-xcb1, libxcb-dri3-0 (>= 1.13), libxcb-present0, libxcb-randr0, libxcb-sync1, libxcb-xfixes0, libxcb1 (>= 1.9.2), libxshmfence1, libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Enhances: libva2
+Breaks: mesa-va-drivers (<< 25.2.8-3), mesa-vdpau-drivers (<< 25.2.8-3)
+Replaces: mesa-va-drivers (<< 25.2.8-3), mesa-vdpau-drivers (<< 25.2.8-3)
+Provides: libglapi-mesa, mesa-va-drivers, mesa-vdpau-drivers, va-driver
+Filename: ./mesa-libgallium_26.0.8-1_amd64.deb
+Size: 4559844
+MD5sum: a2ff30f81221092e83db97e414333a7f
+SHA1: 328cc4dbc8d1ad52ccdaf3b76d57b60b940b3add
+SHA256: aa7b988546fe5ccd9fb33079a5b6b3320013fba3534bd56528a914465d842014
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: shared infrastructure for Mesa drivers
+ This package contains libgallium, a private library shared between
+ multiple Mesa drivers. This library is an implementation detail of Mesa
+ and should not be used directly by user code.
+
+Package: mesa-libgallium-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 4229
+Depends: mesa-libgallium (= 26.0.8-1)
+Filename: ./mesa-libgallium-dbgsym_26.0.8-1_amd64.deb
+Size: 651036
+MD5sum: f65ffc25902f20f51facc5766b823335
+SHA1: b5a7baf2ccd917f4cfeb3520c4ee82e17c0b6181
+SHA256: 120f1fe6210f45c70847df0d58b8812bda741637369dfeb6cbbba45d6c52133a
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for mesa-libgallium
+Build-Ids: 488e8187c2769563c631f32cea00974bd2737502
+
+Package: mesa-libgallium-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 3678
+Depends: mesa-libgallium (= 26.0.8-1)
+Filename: ./mesa-libgallium-dbgsym_26.0.8-1_i386.deb
+Size: 649716
+MD5sum: b2c2177ea227a50584d5049e7d8106e8
+SHA1: 6c8b7ee8ee4097ec6c5338575f392fc0ad9daf3b
+SHA256: addab1628739b2b7c192b346bf94c5ab09a58d00428bee3b0a200cad5eedc3b7
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for mesa-libgallium
+Build-Ids: 755ff10abae5da3d99aa430fd15008e60780eef4
+
 Package: mesa-opencl-icd
 Source: mesa
 Version: 26.0.8-1
 Architecture: amd64
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
-Installed-Size: 30178
-Depends: libclc-22, ocl-icd-libopencl1 | libopencl1, libc6 (>= 2.42), libclang-cpp22 (>= 1:22.1.8), libdrm-amdgpu1 (>= 2.4.125-1), libdrm2 (>= 2.4.125-1), libelf1t64 (>= 0.142), libexpat1 (>= 2.0.1), libgcc-s1 (>= 4.2), libllvm22 (>= 1:22.1.0), libllvmspirvlib22.1, libstdc++6 (>= 12), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Installed-Size: 30182
+Depends: libclc-23, ocl-icd-libopencl1 | libopencl1, libc6 (>= 2.42), libclang-cpp23 (>= 1:23.1.7~++20261120053652+f51e6963e4ed), libdrm-amdgpu1 (>= 2.4.125-1), libdrm2 (>= 2.4.125-1), libelf1t64 (>= 0.142), libexpat1 (>= 2.0.1), libgcc-s1 (>= 4.2), libllvm23, libllvmspirvlib-23-dev, libstdc++6 (>= 12), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
 Provides: opencl-icd
 Filename: ./mesa-opencl-icd_26.0.8-1_amd64.deb
-Size: 4758800
-MD5sum: c966b65bdc9fa0a9bafe9f1b2ca0981e
-SHA1: d69b641ab6910118c6c3b7c831974e6d6956a8c6
-SHA256: ea9e29a99cdd771f7cb8417d5965203e6d09cc25181a07240bab114e3ae7a729
+Size: 4754364
+MD5sum: 311bfda9150b8cff9b454bf14e069470
+SHA1: c1da3dd7e9900ef8d10e749286d37f8e3e16695b
+SHA256: 45bdfbf0614d6cdf70c5c7364ef59283f97d307ab32b488507c85e21cb1619c8
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -427,19 +1219,80 @@ Description: free implementation of the OpenCL API -- ICD runtime
  provides a standardized interface for computational analysis on graphical
  processing units.
 
+Package: mesa-opencl-icd
+Source: mesa
+Version: 26.0.8-1
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 30224
+Depends: libclc-23, ocl-icd-libopencl1 | libopencl1, libc6 (>= 2.42), libdrm-amdgpu1 (>= 2.4.125-1), libdrm2 (>= 2.4.125-1), libelf1t64 (>= 0.142), libexpat1 (>= 2.0.1), libgcc-s1 (>= 4.2), libllvm22 (>= 1:22.1.0), libllvmspirvlib-23-dev, libstdc++6 (>= 12), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Provides: opencl-icd
+Filename: ./mesa-opencl-icd_26.0.8-1_i386.deb
+Size: 5107016
+MD5sum: 0050aaa1fe8ab0cfacf4fd5e54da8d0f
+SHA1: e24dd815b0be5fbc88004c03ad41fc081ebcb2ce
+SHA256: 16e5eb168843d091beb127f26e78fe82bc5452446899a7519fa5bd67b434191a
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: free implementation of the OpenCL API -- ICD runtime
+ This package contains the mesa implementation of the OpenCL (Open Compute
+ Language) library, which is intended for use with an ICD loader. OpenCL
+ provides a standardized interface for computational analysis on graphical
+ processing units.
+
+Package: mesa-opencl-icd-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 7621
+Depends: mesa-opencl-icd (= 26.0.8-1)
+Filename: ./mesa-opencl-icd-dbgsym_26.0.8-1_i386.deb
+Size: 2870076
+MD5sum: ce1988c513cb5324e156df6056a40847
+SHA1: e02c9416d4cdd58d93dc3b4b02d8505cc058d106
+SHA256: 13ec6a2c5bc8d39e6165f7c8abc11888c49278fba8596b66c5f7e6992bc6bcd6
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for mesa-opencl-icd
+Build-Ids: 53f7fb6cae7a259054febf04e399e12c109c113d
+
+Package: mesa-opencl-icd-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 8157
+Depends: mesa-opencl-icd (= 26.0.8-1)
+Filename: ./mesa-opencl-icd-dbgsym_26.0.8-1_amd64.deb
+Size: 2916432
+MD5sum: 0cb445aa998912cc90b7176a02b29efc
+SHA1: 412f39c059e0f840b93c83d187bb5950568c21fc
+SHA256: d107f035ed5a8db3434c3d5535ee7748cc31aac5285558bcba86aa2be068ead5
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for mesa-opencl-icd
+Build-Ids: 8319e502e4bbba52e3e495f0635fc545152e1c1f
+
 Package: mesa-vulkan-drivers
 Source: mesa
 Version: 26.0.8-1
 Architecture: amd64
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Installed-Size: 23642
-Depends: libvulkan1, libc6 (>= 2.43), libdisplay-info3 (>= 0.3.0), libdrm-amdgpu1 (>= 2.4.125-1), libdrm2 (>= 2.4.125-1), libelf1t64 (>= 0.142), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libllvm22 (>= 1:22.1.0), libpng16-16t64 (>= 1.6.46), libstdc++6 (>= 12), libudev1 (>= 183), libwayland-client0 (>= 1.24.0), libx11-xcb1, libxcb-dri3-0 (>= 1.17.0), libxcb-present0 (>= 1.17.0), libxcb-randr0 (>= 1.13), libxcb-shm0, libxcb-sync1, libxcb-xfixes0, libxcb1 (>= 1.9.2), libxshmfence1, libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Depends: libvulkan1, libc6 (>= 2.43), libdisplay-info3 (>= 0.3.0), libdrm-amdgpu1 (>= 2.4.125-1), libdrm2 (>= 2.4.125-1), libelf1t64 (>= 0.142), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libllvm23, libpng16-16t64 (>= 1.6.46), libstdc++6 (>= 12), libudev1 (>= 183), libwayland-client0 (>= 1.24.0), libx11-xcb1, libxcb-dri3-0 (>= 1.17.0), libxcb-present0 (>= 1.17.0), libxcb-randr0 (>= 1.13), libxcb-shm0, libxcb-sync1, libxcb-xfixes0, libxcb1 (>= 1.9.2), libxshmfence1, libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
 Provides: vulkan-icd
 Filename: ./mesa-vulkan-drivers_26.0.8-1_amd64.deb
-Size: 3204936
-MD5sum: 036d226663bd609d074d493f30ff8f52
-SHA1: fd071b0331d7468d6d728ce7e1bca811ce49b2cd
-SHA256: 54c8dc944992263ca9d8ed51aaa757843ed69a63de926252ca933229a6dc12e9
+Size: 3205832
+MD5sum: 6a5533c82874e3e0afcf03fc94d80f61
+SHA1: 8ca18f6a3d0df99f8f0e5ff9cbc4f6eb98d0f710
+SHA256: 97dc7b1002837fd230c502f7ee2e842d41bb8935a177d45fa0789ff15b29a0a5
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -447,4 +1300,63 @@ Homepage: https://mesa3d.org/
 Description: Mesa Vulkan graphics drivers
  Vulkan is a low-overhead 3D graphics and compute API. This package
  includes Vulkan drivers provided by the Mesa project.
+
+Package: mesa-vulkan-drivers
+Source: mesa
+Version: 26.0.8-1
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 22806
+Depends: libvulkan1, libc6 (>= 2.43), libdisplay-info3 (>= 0.3.0), libdrm-amdgpu1 (>= 2.4.125-1), libdrm2 (>= 2.4.125-1), libelf1t64 (>= 0.142), libexpat1 (>= 2.0.1), libgcc-s1 (>= 4.2), libllvm22 (>= 1:22.1.0), libstdc++6 (>= 12), libudev1 (>= 183), libwayland-client0 (>= 1.24.0), libx11-xcb1, libxcb-dri3-0 (>= 1.17.0), libxcb-present0 (>= 1.17.0), libxcb-randr0 (>= 1.13), libxcb-shm0, libxcb-sync1, libxcb-xfixes0, libxcb1 (>= 1.9.2), libxshmfence1, libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Provides: vulkan-icd
+Filename: ./mesa-vulkan-drivers_26.0.8-1_i386.deb
+Size: 3379432
+MD5sum: 8a750f55423936a40d26966ea5b90c0a
+SHA1: a950f53a5aad1a5a9a97cb6c9e4c1d2238aa7bf0
+SHA256: f72e8aaea7f8d8bbfe80a6162aa133d6aabed070170e09768d88716f15b2ed42
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://mesa3d.org/
+Description: Mesa Vulkan graphics drivers
+ Vulkan is a low-overhead 3D graphics and compute API. This package
+ includes Vulkan drivers provided by the Mesa project.
+
+Package: mesa-vulkan-drivers-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: i386
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 2843
+Depends: mesa-vulkan-drivers (= 26.0.8-1)
+Filename: ./mesa-vulkan-drivers-dbgsym_26.0.8-1_i386.deb
+Size: 456720
+MD5sum: 7a771bf73fe4f2028febac5923350f95
+SHA1: 7041168e26ba130166d3081f89dc672e3553ca5c
+SHA256: 5c7496136cabd012acfde598fd3791c9870407866b24d1f2799db7930cd49854
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for mesa-vulkan-drivers
+Build-Ids: 65882584d308620c1bbd2ad2ead83fa9f970b6c9 75896d7a56f0ddfed7b3f259707804c635a69547 961370eda7db8a143a0215a1067ea19e394609d4 99bba4e01fa83204f3c73f81f1211d746fddf7c0 ebda9881cb97cf1b7f8cb00ce3b4b145456dd18e
+
+Package: mesa-vulkan-drivers-dbgsym
+Source: mesa
+Version: 26.0.8-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 3261
+Depends: mesa-vulkan-drivers (= 26.0.8-1)
+Filename: ./mesa-vulkan-drivers-dbgsym_26.0.8-1_amd64.deb
+Size: 463832
+MD5sum: a1df8173345b120710d7a918e058e892
+SHA1: 01c32d12e97423971adf9c81bb7d070645d45ccd
+SHA256: 7afcd16f820185b31f6b6c412cfd455e37293430fe3710c73dd7565e39247fd3
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for mesa-vulkan-drivers
+Build-Ids: 0f63626d390dbaa1f45f524c14fc11948e9bebe7 1f4b8e59fc9ff9115f57b8c6d28243bf362c2940 21f124eba4b10a57fa03d137885f74085f7481bf 9966489b549274a214efb5e1922051d2185c4bff e92d97218a5e1b68a1c371b6df5bd8cf502cb4dd
 
