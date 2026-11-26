@@ -21,7 +21,7 @@ echo "force-overwrite" | sudo tee -a /etc/dpkg/dpkg.cfg
 ### 3. Import the Repository GPG Key
 Download and import the trusted repository public signing key to your system's secure keyring directory:
 ```bash
-sudo wget -O /etc/apt/keyrings/video.asc https://github.com/ilovegangstarap/video_driver_debian/raw/refs/heads/main/public.gpg
+sudo wget -O /etc/apt/keyrings/video.asc https://github.com/ilovegangstarap/video_driver_debian/raw/refs/heads/main/debian/public.gpg
 ```
 
 ### 4. Register the Custom Repository
