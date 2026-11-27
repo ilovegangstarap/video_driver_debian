@@ -85,3 +85,21 @@ sudo apt-mark hold \
   mesa-opencl-icd mesa-opencl-icd:i386 \
   mesa-vulkan-drivers mesa-vulkan-drivers:i386
 ```
+
+### 8. Prioritize Custom Repository (APT Pinning)
+
+Because these packages share names with upstream Debian mirrors, configure APT pinning with a priority of `1001`. This ensures packages from `ilovegangstarap.github.io` are always preferred regardless of version—preventing upstream `apt upgrade` runs from overwriting them while still allowing updates whenever new builds are pushed to this repository:
+
+```bash
+cat << 'EOF' | sudo tee /etc/apt/preferences.d/99-video-driver-debian
+Package: *
+Pin: origin "ilovegangstarap.github.io"
+Pin-Priority: 1001
+EOF
+```
+
+Refresh APT to apply the new priority rules:
+
+```bash
+sudo apt update
+```
