@@ -17,7 +17,7 @@ Restart your PC if prompted, get a distribution from Microsoft Store (preferably
 
 ## 1. Install Host Prerequisites
 
-On your host Linux environment (or WSL), install `debootstrap`, `arch-install-scripts` (for `genfstab` and `arch-chroot`), and `xz-utils`:
+On your host Linux environment (or WSL), install `debootstrap`, and `xz-utils`:
 
 ```bash
 sudo apt update
