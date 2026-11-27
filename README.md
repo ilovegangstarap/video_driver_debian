@@ -1,6 +1,7 @@
 # Video Runtime - Debian Repository
 
 This repository provides custom, pre-compiled Mesa and DRM graphic driver packages (Mesa version `26.0.8-1` and libdrm version `2.4.134-3`) as provided by [DionKill](https://github.com/DionKill/ps4-video-archlinux) built for Debian Sid based environments. It includes full multi-arch (`amd64` and `i386`) library support for running high-performance graphics, Steam, Proton, and Wine applications.
+Want to install Debian Sid on your PlayStation? If you didn't come from it already, visit the [Debian Sid guide](https://ilovegangstarap.github.io/video_driver_debian)
 
 ## Installation Guide
 

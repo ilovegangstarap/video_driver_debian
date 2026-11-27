@@ -18,6 +18,7 @@
     "esbuild@0.21.5": true
   },
   "dependencies": {
-    "@catppuccin/vitepress": "^0.1.4"
+    "@catppuccin/vitepress": "^0.1.4",
+    "@fontsource/maple-mono": "^5.3.0"
   }
 }
