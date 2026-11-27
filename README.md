@@ -6,37 +6,37 @@ This repository provides custom, pre-compiled Mesa and DRM graphic driver packag
 
 Follow these steps to add the trusted GPG signing key, register the custom repository mirror, and install the exact versions of the driver stack.
 
-### 1. Enable 32-bit Architecture Support
+### 1. Enable 32-bit Architecture Support (NOT OPTIONAL)
 You are running a 64-bit operating system, ensure your package manager is configured to handle 32-bit (`i386`) dependencies:
 ```bash
 sudo dpkg --add-architecture i386
 ```
 
-### 2. Configure Dpkg for Overwrites
+### 2. Configure Dpkg for Overwrites (NOT OPTIONAL)
 To prevent the installation from halting due to standard package conflicts, explicitly configure `dpkg` to allow forcing file overwrites:
 ```bash
 echo "force-overwrite" | sudo tee -a /etc/dpkg/dpkg.cfg
 ```
 
-### 3. Import the Repository GPG Key
+### 3. Import the Repository GPG Key (NOT OPTIONAL)
 Download and import the trusted repository public signing key to your system's secure keyring directory:
 ```bash
 sudo wget -O /etc/apt/keyrings/video.asc https://github.com/ilovegangstarap/video_driver_debian/raw/refs/heads/main/debian/public.gpg
 ```
 
-### 4. Register the Custom Repository
+### 4. Register the Custom Repository (NOT OPTIONAL)
 Add the repository source definition to your system's package source listings:
 ```bash
 echo "deb [arch=amd64,i386 signed-by=/etc/apt/keyrings/video.asc] https://ilovegangstarap.github.io/video_driver_debian/debian ./" | sudo tee /etc/apt/sources.list.d/video.list
 ```
 
-### 5. Update Package Directories
+### 5. Update Package Directories (NOT OPTIONAL)
 Resynchronize your system index files to pull the package listings from the newly added mirror:
 ```bash
 sudo apt update
 ```
 
-### 6. Install the Native & Multi-Arch Drivers
+### 6. Install the Native & Multi-Arch Drivers (NOT OPTIONAL)
 Install all runtime libraries, development headers, and kernel interfacing modules simultaneously to align your graphics framework to these exact custom versions:
 
 ```bash
@@ -86,7 +86,7 @@ sudo apt-mark hold \
   mesa-vulkan-drivers mesa-vulkan-drivers:i386
 ```
 
-### 8. Prioritize Custom Repository (APT Pinning)
+### 8. Prioritize Custom Repository (APT Pinning | NOT OPTIONAL)
 
 Because these packages share names with upstream Debian mirrors, configure APT pinning with a priority of `1001`. This ensures packages from `ilovegangstarap.github.io` are always preferred regardless of version—preventing upstream `apt upgrade` runs from overwriting them while still allowing updates whenever new builds are pushed to this repository:
 
